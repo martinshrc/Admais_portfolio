@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldanha Rent A'Car - Locação de Veículos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold-dark': '#b68f53',
+                        'gold-light': '#f0c819',
+                        'brown-dark': '#5c4e49',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://autoranking.com.br/wp-content/uploads/2019/05/Renault_Kwid_Outsider_028baixa.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .file-input-label {
+            border: 2px dashed #b68f53;
+            transition: all 0.3s ease;
+        }
+
+        .file-input-label:hover {
+            background-color: rgba(182, 143, 83, 0.1);
+        }
+
+        .success-message {
+            display: none;
+        }
+
+        .whatsapp-button {
+            box-shadow: 0 4px 12px rgba(25, 211, 85, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5527997979667" target="_blank"
+        class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full flex items-center justify-center whatsapp-button z-50">
+        <i class="fab fa-whatsapp text-2xl mr-2"></i>
+        <span class="hidden sm:inline-block">Tire suas dúvidas</span>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-black text-white shadow-md z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-gold-light">Saldanha <span class="text-gold-dark">Rent
+                        A'Car</span></span>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-gold-light transition">Início</a>
+                <a href="#models" class="hover:text-gold-light transition">Modelos</a>
+                <a href="#waitlist" class="hover:text-gold-light transition">Fila de Espera</a>
+                <a href="#contact" class="hover:text-gold-light transition">Contato</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/saldanharentacar" target="_blank"
+                    class="text-gold-light hover:text-white transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-black w-full py-3 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-gold-light transition">Início</a>
+                <a href="#models" class="hover:text-gold-light transition">Modelos</a>
+                <a href="#waitlist" class="hover:text-gold-light transition">Fila de Espera</a>
+                <a href="#contact" class="hover:text-gold-light transition">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-32 pb-20 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Todos os nossos veículos estão alugados no momento.</h1>
+                <p class="text-lg mb-8">Trabalhamos com modelos econômicos como Kwid, Sandero, Fiat Mobi e outros
+                    veículos populares novos. Cadastre-se na fila de espera e seja avisado assim que um carro estiver
+                    disponível.</p>
+                <a href="#waitlist"
+                    class="bg-gold-light hover:bg-gold-dark text-black font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                    Entrar na Fila de Espera
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Models Section -->
+    <section id="models" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-brown-dark">Modelos Mais Alugados</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                <!-- Renault Kwid -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://s2-g1.glbimg.com/7170_BjiArWb5Sj4BdSW9okZOTg=/0x0:1080x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/s/E/9DMGUBSZa89tRN2QgKAg/regence-especial-pub-mat-3-foto-2-kwid-intense-2020.jpg"
+                        alt="Renault Kwid" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-brown-dark mb-2">Renault Kwid</h3>
+                        <p class="text-gray-600">Disponível em breve para locação</p>
+                    </div>
+                </div>
+
+                <!-- Fiat Mobi -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://stellantis3.dam-broadcast.com/medias/domain12808/media108661/2598478-blphl7x1kg-whr.jpg"
+                        alt="Fiat Mobi" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-brown-dark mb-2">Fiat Mobi</h3>
+                        <p class="text-gray-600">Disponível em breve para locação</p>
+                    </div>
+                </div>
+
+                <!-- Renault Sandero -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://i0.statig.com.br/bancodeimagens/5d/f7/tz/5df7tz8cxtswg7i9tqcei6uk2.jpg"
+                        alt="Renault Sandero" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-brown-dark mb-2">Renault Sandero</h3>
+                        <p class="text-gray-600">Disponível em breve para locação</p>
+                    </div>
+                </div>
+
+                <!-- Chevrolet Onix -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://www.chevrolet.com.br/bypass/gmccontenthub/chevrolet/brasil/colorizer_onix/images/colorizer/chevrolet-onix-branco-summit-3-4-frente.png"
+                        alt="Chevrolet Onix" class="w-full h-48 object-contain">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-brown-dark mb-2">Chevrolet Onix</h3>
+                        <p class="text-gray-600">Disponível em breve para locação</p>
+                    </div>
+                </div>
+
+                <!-- Hyundai HB20 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuTkhh0Yg419dgpIrZW-WNWT2zJeCZIXU9yA&s"
+                        alt="Hyundai HB20" class="w-full h-48 object-contain">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-brown-dark mb-2">Hyundai HB20</h3>
+                        <p class="text-gray-600">Disponível em breve para locação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <h2 class="text-3xl font-bold text-center mb-6 text-brown-dark">Cadastre-se na Fila de Espera</h2>
+                    <p class="text-center mb-8 text-gray-700">Preencha os dados abaixo para entrar na nossa lista de
+                        espera. Entraremos em contato assim que houver um veículo disponível.</p>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="success-message"
+                        class="success-message bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6">
+                        <strong class="font-bold">Cadastro realizado com sucesso!</strong>
+                        <span class="block sm:inline">Você está agora na fila de espera.</span>
+                    </div>
+
+                    <!-- Waitlist Form -->
+                    <form id="waitlist-form" class="space-y-6">
+                        <div>
+                            <label for="fullname" class="block text-sm font-medium text-gray-700 mb-1">Nome completo
+                                *</label>
+                            <input type="text" id="fullname" name="nome" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-dark">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Celular com DDD
+                                *</label>
+                            <input type="tel" id="phone" name="telefone" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-dark">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-dark">
+                        </div>
+
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Idade</label>
+                            <input type="number" id="age" name="idade" min="18"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-dark">
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="w-full bg-gold-dark hover:bg-brown-dark text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                                Enviar Cadastro
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-brown-dark text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contato</h2>
+
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gold-light">Informações</h3>
+                    <p class="mb-4"><i class="fas fa-map-marker-alt mr-2 text-gold-light"></i> Endereço da empresa</p>
+                    <p class="mb-4"><i class="fas fa-phone mr-2 text-gold-light"></i> (27) 99797-9667</p>
+                    <p class="mb-4"><i class="fas fa-envelope mr-2 text-gold-light"></i> contato@saldanharentacar.com
+                    </p>
+
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold mb-2 text-gold-light">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://instagram.com/saldanharentacar" target="_blank"
+                                class="text-white hover:text-gold-light transition">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-gold-light transition">
+                                <i class="fab fa-facebook text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gold-light">Horário de Funcionamento</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between border-b border-gold-dark pb-2">
+                            <span>Segunda a Sexta</span>
+                            <span>08:00 - 18:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gold-dark pb-2">
+                            <span>Sábado</span>
+                            <span>09:00 - 13:00</span>
+                        </li>
+                        <li class="flex justify-between pb-2">
+                            <span>Domingo</span>
+                            <span>Fechado</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6">
+                        <a href="https://wa.me/5527997979667" target="_blank"
+                            class="inline-flex items-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-2 px-4 rounded transition">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-gold-light">Saldanha <span class="text-gold-dark">Rent
+                            A'Car</span></span>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="mb-2">Instagram: @saldanharentacar</p>
+                    <p class="text-gray-400">© 2025 Saldanha Rent A'Car – Todos os direitos reservados.</p>
+                    <a href="#" class="text-gray-400 hover:text-gold-light transition mt-2 inline-block">Política de
+                        Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submission
+        const waitlistForm = document.getElementById('waitlist-form');
+        const successMessage = document.getElementById('success-message');
+
+        waitlistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Validação básica
+            if (!waitlistForm.fullname.value.trim() || !waitlistForm.phone.value.trim()) {
+                alert('Por favor, preencha pelo menos nome e telefone!');
+                return;
+            }
+
+            const formData = {
+                nome: waitlistForm.fullname.value.trim(),
+                telefone: waitlistForm.phone.value.trim(),
+                email: waitlistForm.email.value.trim() || "Não informado",
+                idade: waitlistForm.age.value.trim() || "Não informado",
+                data: new Date().toLocaleString('pt-BR')
+            };
+
+            // URL da Web App (substitua pela sua URL real)
+            const webAppUrl = "https://script.google.com/macros/s/AKfycbzWnBUerw88VWh5bZUH7hsT6_iTy6VbReTfBeaAyUaUD3Bq7soi1btc2xmaciib5X_Xdw/exec";
+
+            try {
+                const response = await fetch(webAppUrl, {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    mode: 'no-cors', // ← Adicione esta linha
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                // Se usar mode: 'no-cors', não podemos ler a resposta
+                successMessage.style.display = 'block';
+                waitlistForm.reset();
+
+            } catch (error) {
+                console.error("Erro completo:", error);
+
+                // Teste alternativo via GET (para diagnóstico)
+                const testUrl = `${webAppUrl}?nome=Teste&telefone=999999999`;
+                const testResponse = await fetch(testUrl);
+                const testResult = await testResponse.text();
+                console.log("Teste GET:", testResult);
+
+                alert("Cadastro recebido! Entraremos em contato em breve.");
+            }
+
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    // Calculate the scroll position, accounting for the fixed header
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

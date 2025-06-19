@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admais | Especialistas em Performance Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed w-full bg-graphite bg-opacity-90 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-white">Admais</a>
+                    <span class="ml-2 text-tech-cyan text-sm font-medium">Especialistas em Performance Digital</span>
+                </div>
+
+                <nav id="main-nav" class="hidden absolute top-full left-0 w-full bg-graphite-light p-6 
+                                     md:static md:flex md:w-auto md:bg-transparent md:p-0">
+                    <div class="flex flex-col items-center gap-6 md:flex-row md:space-x-8">
+                        <a href="#cases"
+                            class="text-snow-white hover:text-tech-cyan transition underline-hover">Cases</a>
+                        <a href="#solutions"
+                            class="text-snow-white hover:text-tech-cyan transition underline-hover">Soluções</a>
+                        <a href="#contact"
+                            class="text-snow-white hover:text-tech-cyan transition underline-hover">Contato</a>
+                    </div>
+                </nav>
+
+                <button id="mobile-menu-button" class="md:hidden text-snow-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center pt-20 pb-16">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="max-w-3xl fade-in-section">
+                <h1 class="text-4xl md:text-6xl font-bold text-snow-white mb-6 leading-tight">
+                    Menos achismo, <span class="text-tech-cyan">mais resultado.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-snow-white opacity-90 mb-10">
+                    Analisamos seus dados, identificamos as oportunidades e criamos a estratégia correta para aumentar
+                    seus
+                    lucros.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                    <a href="#cases"
+                        class="inline-block w-full sm:w-auto bg-gradient-to-r from-royal-blue to-tech-cyan text-white font-semibold px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300 pulse-button">
+                        Explore nossos cases
+                    </a>
+                    <a href="#contact" class="text-snow-white/80 hover:text-white transition group">
+                        Agende uma análise
+                        <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-0 right-0 px-6 fade-in-section" style="animation-delay: 0.5s;">
+                <div class="max-w-4xl mx-auto text-center">
+
+                    <div class="flex justify-center items-center gap-4 md:gap-6 text-snow-white/60 text-sm mb-8">
+                        <span>Google Ads</span>
+                        <span class="text-tech-cyan text-xl">&bull;</span>
+                        <span>Meta Ads</span>
+                        <span class="text-tech-cyan text-xl">&bull;</span>
+                        <span>Otimização de Conversão (CRO)</span>
+                        <span class="text-tech-cyan text-xl">&bull;</span>
+                        <span>Análise de Dados</span>
+                    </div>
+
+                    <a href="#cases"
+                        class="text-snow-white/70 hover:text-white transition-colors duration-300 animate-bounce-slow">
+                        <i class="fas fa-chevron-down text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- CASES ATIVOS -->
+    <section id="cases" class="py-20 bg-graphite">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-snow-white mb-4">Conheça nossos projetos</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-royal-blue to-tech-cyan mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CASE 1 -->
+                <a href="projetos/saldanharent/index.html" target="_blank" rel="noopener noreferrer">
+                    <div
+                        class="bg-graphite-light rounded-xl p-6 transition-all duration-300 hover:-translate-y-2 card-glow fade-in-section h-full flex flex-col justify-between">
+                        <div>
+                            <div class="relative overflow-hidden rounded-lg mb-6 h-48">
+                                <img src="imgs/saldanha_print.png" alt="Print do site da locadora de veículos"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4">
+                                    <h3 class="text-xl font-bold text-white">Locadora de Veículos</h3>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-tech-cyan font-semibold">Objetivo</h4>
+                                    <p class="text-snow-white/80">Aumentar as reservas diretas, reduzindo a dependência
+                                        de
+                                        comparadores de preços que diminuíam a margem de lucro.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-tech-cyan font-semibold">Nossa Estratégia</h4>
+                                    <p class="text-snow-white/80">Campanhas geolocalizadas no Google Ads e SEO local
+                                        para atrair
+                                        clientes diretos. Otimizamos a página de reserva para agilizar o processo.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-tech-cyan font-semibold">Impacto Gerado</h4>
+                                    <p class="text-snow-white/80"><strong class="text-white">+70% em reservas
+                                            diretas</strong>
+                                        com <strong class="text-white">redução de 40% no custo</strong> por locação,
+                                        aumentando
+                                        a lucratividade.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-right mt-6">
+                            <span class="text-sm font-semibold text-tech-cyan group">
+                                Acessar site criado pela Admais
+                                <i
+                                    class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-1"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CASE 2 -->
+                <a href="projetos/tabuas_loja/index.html" target="_blank" rel="noopener noreferrer">
+                    <div
+                        class="bg-graphite-light rounded-xl p-6 transition-all duration-300 hover:-translate-y-2 card-glow fade-in-section h-full flex flex-col justify-between">
+                        <div>
+                            <div class="relative overflow-hidden rounded-lg mb-6 h-48">
+                                <img src="imgs/tabuas_print.png" alt="Tábua de carne artesanal"
+                                    class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4">
+                                    <h3 class="text-xl font-bold text-white">E-commerce de Tábuas Gourmet</h3>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-tech-cyan font-semibold">Objetivo</h4>
+                                    <p class="text-snow-white/80">Alcançar um público de nicho (amantes de churrasco e
+                                        presentes) e transformar o tráfego em vendas com um orçamento limitado.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-tech-cyan font-semibold">Nossa Estratégia</h4>
+                                    <p class="text-snow-white/80">Campanhas visuais no Instagram e Facebook Ads, com
+                                        segmentação
+                                        por interesses, e Google Shopping para capturar buscas de compra direta.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-tech-cyan font-semibold">Impacto Gerado</h4>
+                                    <p class="text-snow-white/80"><strong class="text-white">Retorno de 8.5x</strong>
+                                        sobre o
+                                        investimento em anúncios (ROAS) e <strong class="text-white">+300% de
+                                            faturamento</strong> em 6 meses.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-right mt-6">
+                            <span class="text-sm font-semibold text-tech-cyan group">
+                                Acessar site criado pela Admais
+                                <i
+                                    class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-1"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CASE 3 -->
+                <div
+                    class="bg-graphite-light rounded-xl p-6 transition-all duration-300 hover:-translate-y-2 card-glow fade-in-section">
+                    <div class="relative overflow-hidden rounded-lg mb-6 h-48">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Estudantes em um campus universitário" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Centro Educacional</h3>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-tech-cyan font-semibold">Objetivo</h4>
+                            <p class="text-snow-white/80">Gerar um fluxo constante de leads qualificados para
+                                matrículas, diminuindo o alto Custo por Lead (CPL) fora dos períodos de pico.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-tech-cyan font-semibold">Nossa Estratégia</h4>
+                            <p class="text-snow-white/80">Funil de captação com e-books e webinars, nutrindo leads com
+                                automação de e-mail e campanhas de Geração de Leads no Meta Ads.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-tech-cyan font-semibold">Impacto Gerado</h4>
+                            <p class="text-snow-white/80"><strong class="text-white">-50% no Custo por Lead</strong>
+                                qualificado e <strong class="text-white">+45% no número de matrículas</strong> via
+                                canais digitais.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- CASE 4 quando precisar colocar-->
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-snow-white mb-4">Nossas Soluções de Performance</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-royal-blue to-tech-cyan mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
+                <div
+                    class="service-card bg-graphite-light rounded-xl p-8 transition-all duration-300 hover:shadow-lg fade-in-section">
+                    <div class="text-tech-cyan mb-6">
+                        <i class="fas fa-bullseye service-icon text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-snow-white mb-4">Gestão de Tráfego</h3>
+                    <p class="text-snow-white/80 mb-6">
+                        Campanhas estratégicas no Google Ads e Meta Ads com otimização em tempo real para maximizar seu
+                        ROI.
+                    </p>
+                    <ul class="space-y-2 text-snow-white/80">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Estratégias baseadas em dados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Otimização contínua de campanhas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Relatórios transparentes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solution 2 -->
+                <div
+                    class="service-card bg-graphite-light rounded-xl p-8 transition-all duration-300 hover:shadow-lg fade-in-section">
+                    <div class="text-tech-cyan mb-6">
+                        <i class="fas fa-chart-line service-icon text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-snow-white mb-4">Otimização de Conversão (CRO)</h3>
+                    <p class="text-snow-white/80 mb-6">
+                        Transformamos visitantes em clientes através de testes A/B, análise de jornada e otimização de
+                        UX.
+                    </p>
+                    <ul class="space-y-2 text-snow-white/80">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Testes A/B multivariados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Análise de heatmaps e gravações</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Personalização de jornada</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Solution 3 -->
+                <div
+                    class="service-card bg-graphite-light rounded-xl p-8 transition-all duration-300 hover:shadow-lg fade-in-section">
+                    <div class="text-tech-cyan mb-6">
+                        <i class="fas fa-desktop service-icon text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-snow-white mb-4">Sites e Landing Pages de Alta Conversão</h3>
+                    <p class="text-snow-white/80 mb-6">
+                        Construímos a presença digital da sua marca com sites e páginas focados em uma única coisa:
+                        transformar visitantes em clientes.
+                    </p>
+                    <ul class="space-y-2 text-snow-white/80">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Design focado na experiência do usuário (UX)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Otimizado para velocidade e SEO</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Pronto para capturar e converter leads</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Solution 4 -->
+                <div
+                    class="service-card bg-graphite-light rounded-xl p-8 transition-all duration-300 hover:shadow-lg fade-in-section">
+                    <div class="text-tech-cyan mb-6">
+                        <i class="fas fa-database service-icon text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-snow-white mb-4">Análise de Dados & BI</h3>
+                    <p class="text-snow-white/80 mb-6">
+                        Tomadas de decisão baseadas em dados com dashboards personalizados e análises preditivas.
+                    </p>
+                    <ul class="space-y-2 text-snow-white/80">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Integração de fontes de dados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Dashboards em tempo real</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-tech-cyan mt-1 mr-2 text-sm"></i>
+                            <span>Insights acionáveis</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-graphite">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto fade-in-section">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-snow-white mb-4">Vamos acelerar seus resultados?</h2>
+                    <p class="text-xl text-snow-white/80">Preencha o formulário e nossa equipe entrará em contato em até
+                        24h.</p>
+                </div>
+
+                <form class="bg-graphite-light rounded-xl p-8 md:p-10 shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <label for="name" class="block text-snow-white mb-2">Nome completo</label>
+                            <input type="text" id="name"
+                                class="w-full bg-graphite border border-gray-700 rounded-lg px-4 py-3 text-snow-white focus:outline-none form-input transition"
+                                placeholder="Seu nome">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-snow-white mb-2">E-mail</label>
+                            <input type="email" id="email"
+                                class="w-full bg-graphite border border-gray-700 rounded-lg px-4 py-3 text-snow-white focus:outline-none form-input transition"
+                                placeholder="seu@email.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-snow-white mb-2">Telefone</label>
+                            <input type="tel" id="phone"
+                                class="w-full bg-graphite border border-gray-700 rounded-lg px-4 py-3 text-snow-white focus:outline-none form-input transition"
+                                placeholder="(00) 00000-0000">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-snow-white mb-2">Empresa</label>
+                            <input type="text" id="company"
+                                class="w-full bg-graphite border border-gray-700 rounded-lg px-4 py-3 text-snow-white focus:outline-none form-input transition"
+                                placeholder="Nome da sua empresa">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label for="message" class="block text-snow-white mb-2">Como podemos ajudar?</label>
+                        <textarea id="message" rows="4"
+                            class="w-full bg-graphite border border-gray-700 rounded-lg px-4 py-3 text-snow-white focus:outline-none form-input transition"
+                            placeholder="Descreva seus objetivos e desafios"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-royal-blue to-tech-cyan text-white font-semibold px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300">
+                        Enviar mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black/20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-white">Admais</span>
+                        <span class="ml-2 text-tech-cyan text-sm font-medium">Especialistas em Performance
+                            Digital</span>
+                    </div>
+                    <p class="text-snow-white/60 mt-2 text-sm">Transformando dados em crescimento desde 2018.</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="text-snow-white/60 hover:text-tech-cyan transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-snow-white/60 hover:text-tech-cyan transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-snow-white/60 hover:text-tech-cyan transition">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-snow-white/50 text-sm mb-4 md:mb-0">© 2023 Admais Performance Digital. Todos os direitos
+                    reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-snow-white/50 hover:text-snow-white text-sm">Termos de Serviço</a>
+                    <a href="#" class="text-snow-white/50 hover:text-snow-white text-sm">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
